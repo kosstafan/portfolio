@@ -1,7 +1,32 @@
-body{
-    margin: 100px;
-    background: #ccc
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'robotoregular';
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+@import 'fonts/roboto';
+@import 'fonts/Webissimo';
+@import 'common/main';
+@import 'common/welcome';
 @import 'common/menu';
 @import 'common/technologies';
 @import 'common/slider';
+@import 'common/about';
+@import 'common/blog';
+@import 'common/works';
+

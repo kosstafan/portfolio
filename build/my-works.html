@@ -7,28 +7,142 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Мои работы</h1>
-    <div class="container">
-      <ul id="slides">
-        <li class="slide showing"></li>
-        <li class="slide"></li>
-        <li class="slide"></li>
-      </ul>
-      <div class="buttons">
-        <button class="controls" id="previous">&lt;</button>
-        <button class="controls" id="next">&gt;</button>
+    <section class="section hero">
+      <div class="hero__social">
+        <ul class="social-blok">
+          <li class="social-blok__item"><a class="social-blok__link" href="#">
+              <svg class="social-blok__img">
+                <use xlink:href="assets/images/symbols.svg#vk"></use>
+              </svg></a></li>
+          <li class="social-blok__item"><a class="social-blok__link" href="#">
+              <svg class="social-blok__img">
+                <use xlink:href="assets/images/symbols.svg#github"></use>
+              </svg></a></li>
+          <li class="social-blok__item"><a class="social-blok__link" href="#">
+              <svg class="social-blok__img">
+                <use xlink:href="assets/images/symbols.svg#in"></use>
+              </svg></a></li>
+        </ul>
       </div>
-    </div>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+      <div class="hero__menu"><img class="hamburger" src="assets/images/hamburger.svg" alt=""></div>
+      <div class="hero__title">
+        <div class="user-blok">
+          <div class="user-blok__avatar"><img class="user-blok__img" src="assets/images/user-avatar.jpg" alt=""></div>
+          <div class="user-blok__name">Владимир Астахов</div>
+          <div class="user-blok__description">Личный сайт веб разработчика</div>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <div class="scroll-btn"><img class="scroll-btn__pic" src="assets/images/arrow_down.svg" alt=""></div>
+      </div>
+    </section>
+    <section class="section works">
+      <svg class="bg-figure" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0,0 50,99 100,0 100,100 0,100 0,0"></polygon>
+      </svg>
+      <div class="works__area">
+        <div class="works__title">
+          <div class="title-blok">мои работы</div>
+        </div>
+        <div class="works__slider">
+          <div class="slider">
+            <div class="slider__description">
+              <div class="slider__title subtitle-blok">Сайт школы онлайн Образования</div>
+              <div class="slider__tecnologes">HTML , CSS, JAVASCRIPT</div><a class="slider__link" href="#"><img class="slider__link-icon" src="assets/images/link.svg" alt=""><span class="slider__link-txt">Посмотреть сайт</span></a>
+            </div>
+            <div class="slider__content">
+              <div class="slider__item"><img class="slider__image" src="assets/images/slider-1.png" alt=""></div>
+              <div class="slider__manager">
+                <div class="slider__btn slider__btn_left"><img class="slider__element" src="assets/images/slide1.jpg" alt=""></div>
+                <div class="slider__btn slider__btn_right"><img class="slider__element" src="assets/images/slide1.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section reviews">
+      <div class="reviews__title">
+        <div class="title-blok">Что обо мне говорят</div>
+      </div>
+      <div class="reviews__content">
+        <div class="reviews-blok">
+          <div class="reviews-blok__pic"><img class="reviews-blok__image" src="assets/images/reviews-1.jpg" alt=""></div>
+          <div class="reviews-blok__txt">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+          <div class="reviews-blok__autor"><span class="reviews-blok__autor-name">Ковальчук Дмитрий</span><span class="reviews-blok__autor-position">— основатель Loftschool</span></div>
+        </div>
+        <div class="reviews-blok">
+          <div class="reviews-blok__pic"><img class="reviews-blok__image" src="assets/images/reviews-2.jpg" alt=""></div>
+          <div class="reviews-blok__txt">Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!</div>
+          <div class="reviews-blok__autor"><span class="reviews-blok__autor-name">Сабанцев Владимир</span><span class="reviews-blok__autor-position">— преподаватель</span></div>
+        </div>
+      </div>
+      <div class="reviews__form">
+        <div class="form-blok">
+          <div class="form-blok__title">
+            <div class="subtitle-blok">Связаться со мной</div>
+          </div>
+          <form class="form-blok__form" id="form" action="/">
+            <div class="form-blok__content">
+              <div class="form-blok__row">
+                <input class="form-blok__input" type="name" required placeholder="Имя">
+              </div>
+              <div class="form-blok__row">
+                <input class="form-blok__input" type="email" required placeholder="Email">
+              </div>
+              <div class="form-blok__row">
+                <input class="form-blok__input form-blok__input_txt" type="text" required placeholder="Ваше сообщение">
+              </div>
+              <div class="form-blok__action">
+                <input class="form-blok__btn" type="submit">
+                <input class="form-blok__btn" type="reset" value="Очистить">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="footer">
+        <ul class="footer__list footer-list">
+          <li class="footer__section">
+            <div class="footer-legend text-blok_footer">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </div>
+          </li>
+          <li class="footer__section">
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Мои работы</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Обо мне</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Блог</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Авторизация</a></li>
+            </ul>
+            <div class="footer__social">
+              <ul class="social-blok_footer">
+                <li class="social-blok__item_footer"><a class="social-blok__link_footer" href="#">
+                    <svg class="social-blok__img_footer">
+                      <use xlink:href="assets/images/symbols.svg#vk"></use>
+                    </svg></a></li>
+                <li class="social-blok__item_footer"><a class="social-blok__link_footer" href="#">
+                    <svg class="social-blok__img_footer">
+                      <use xlink:href="assets/images/symbols.svg#github"></use>
+                    </svg></a></li>
+                <li class="social-blok__item_footer"><a class="social-blok__link_footer" href="#">
+                    <svg class="social-blok__img_footer">
+                      <use xlink:href="assets/images/symbols.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="footer__section">
+            <div class="footer-passage">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</div>
+            <div class="footer-passage_autor">— Martin Golding</div>
+          </li>
+        </ul>
+        <div class="footer__bottom-line">
+          <div class="copyright text-blok_copyright">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</div>
+        </div>
+      </footer>
+    </section>
   </body>
 </html>

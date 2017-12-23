@@ -4,5 +4,117 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    section.section.hero
+        .hero__social
+            ul.social-blok
+                li.social-blok__item
+                    a.social-blok__link(href="#")
+                        svg.social-blok__img
+                            use(xlink:href="assets/images/symbols.svg#vk")
+                li.social-blok__item
+                    a.social-blok__link(href="#")
+                        svg.social-blok__img
+                            use(xlink:href="assets/images/symbols.svg#github")
+                li.social-blok__item
+                    a.social-blok__link(href="#")
+                        svg.social-blok__img
+                            use(xlink:href="assets/images/symbols.svg#in")
+        .hero__menu
+            img.hamburger(src="assets/images/hamburger.svg", alt="")
+        .hero__title
+            .user-blok
+                .user-blok__avatar
+                    img.user-blok__img(src="assets/images/user-avatar.jpg", alt="")
+                .user-blok__name Владимир Астахов
+                .user-blok__description Личный сайт веб разработчика
+        .hero__scroll
+            .scroll-btn
+                img.scroll-btn__pic(src="assets/images/arrow_down.svg", alt="")
+    section.section.works
+        svg.bg-figure(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none")
+                polygon(points="0,0 50,99 100,0 100,100 0,100 0,0")
+        .works__area
+            .works__title
+                .title-blok мои работы
+            .works__slider
+                .slider
+                    .slider__description
+                        .slider__title.subtitle-blok Сайт школы онлайн Образования
+                        .slider__tecnologes HTML , CSS, JAVASCRIPT
+                        a.slider__link(href="#")
+                            img.slider__link-icon(src="assets/images/link.svg", alt="")
+                            span.slider__link-txt Посмотреть сайт
+                    .slider__content
+                        .slider__item
+                            img.slider__image(src="assets/images/slider-1.png", alt="")
+                        .slider__manager
+                            .slider__btn.slider__btn_left
+                                img.slider__element(src="assets/images/slide1.jpg", alt="")
+                            .slider__btn.slider__btn_right
+                                img.slider__element(src="assets/images/slide1.jpg", alt="")
+    section.section.reviews
+        .reviews__title
+            .title-blok Что обо мне говорят
+        .reviews__content
+            .reviews-blok
+                .reviews-blok__pic
+                    img.reviews-blok__image(src="assets/images/reviews-1.jpg", alt="")
+                .reviews-blok__txt Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews-blok__autor
+                    span.reviews-blok__autor-name Ковальчук Дмитрий
+                    span.reviews-blok__autor-position — основатель Loftschool
+            .reviews-blok
+                .reviews-blok__pic
+                    img.reviews-blok__image(src="assets/images/reviews-2.jpg", alt="")
+                .reviews-blok__txt Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                .reviews-blok__autor
+                    span.reviews-blok__autor-name Сабанцев Владимир
+                    span.reviews-blok__autor-position — преподаватель
+        .reviews__form
+            .form-blok
+                .form-blok__title
+                    .subtitle-blok Связаться со мной
+                form.form-blok__form#form(action="/")
+                    .form-blok__content
+                        .form-blok__row
+                            input.form-blok__input(type="name" required placeholder="Имя")
+                        .form-blok__row
+                            input.form-blok__input(type="email" required placeholder="Email")
+                        .form-blok__row
+                            input.form-blok__input.form-blok__input_txt(type="text" required placeholder="Ваше сообщение")
+                        .form-blok__action
+                            input.form-blok__btn(type="submit")
+                            input.form-blok__btn(type="reset" value="Очистить")
+        footer.footer
+            ul.footer__list.footer-list
+                li.footer__section
+                    .footer-legend.text-blok_footer Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                li.footer__section
+                    ul.footer-menu
+                        li.footer-menu__item
+                            a.footer-menu__link(href="#") Мои работы
+                        li.footer-menu__item
+                            a.footer-menu__link(href="#") Обо мне
+                        li.footer-menu__item
+                            a.footer-menu__link(href="#") Блог
+                        li.footer-menu__item
+                            a.footer-menu__link(href="#") Авторизация
+                    .footer__social
+                        ul.social-blok_footer
+                            li.social-blok__item_footer
+                                a.social-blok__link_footer(href="#")
+                                    svg.social-blok__img_footer
+                                        use(xlink:href="assets/images/symbols.svg#vk")
+                            li.social-blok__item_footer
+                                a.social-blok__link_footer(href="#")
+                                    svg.social-blok__img_footer
+                                        use(xlink:href="assets/images/symbols.svg#github")
+                            li.social-blok__item_footer
+                                a.social-blok__link_footer(href="#")
+                                    svg.social-blok__img_footer
+                                        use(xlink:href="assets/images/symbols.svg#in")
+                li.footer__section
+                    .footer-passage Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                    .footer-passage_autor — Martin Golding
+            .footer__bottom-line
+                .copyright.text-blok_copyright © Владимир Астахов | Создано с любовью в LoftSchool | 2016

@@ -7,24 +7,41 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <section class="section hero welcome">
+      <div class="hero__title">
+        <div class="user-blok user-blok_welcome">
+          <div class="user-blok__avatar"><img class="user-blok__img" src="assets/images/user-avatar.jpg" alt=""></div>
+          <div class="user-blok__name">Владимир Астахов</div>
+          <div class="user-blok__description">Личный сайт веб разработчика</div>
+          <ul class="social-blok_welcome">
+            <li class="social-blok__item_welcome"><a class="social-blok__link_welcome" href="#">
+                <svg class="social-blok__img_welcome">
+                  <use xlink:href="assets/images/symbols.svg#vk"></use>
+                </svg></a></li>
+            <li class="social-blok__item_welcome"><a class="social-blok__link_welcome" href="#">
+                <svg class="social-blok__img_welcome">
+                  <use xlink:href="assets/images/symbols.svg#github"></use>
+                </svg></a></li>
+            <li class="social-blok__item_welcome"><a class="social-blok__link_welcome" href="#">
+                <svg class="social-blok__img_welcome">
+                  <use xlink:href="assets/images/symbols.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <ul class="welcome-nav">
+            <li class="welcome-nav__item"><a class="welcome-nav__link" href="my-works.html">Мои работы</a></li>
+            <li class="welcome-nav__item"><a class="welcome-nav__link" href="about.html">Обо мне</a></li>
+            <li class="welcome-nav__item"><a class="welcome-nav__link" href="blog.html">Блог</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="welcome__autorization">
+        <div class="autorization"><a class="autorization-link" href="#">Авторизоваться</a></div>
+      </div>
+      <div class="copyright copyright_welcome text-blok_copyright">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</div>
+    </section>
   </body>
 </html>

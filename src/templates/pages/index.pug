@@ -4,10 +4,35 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    section.section.hero.welcome
+        .hero__title
+            .user-blok.user-blok_welcome
+                .user-blok__avatar
+                    img.user-blok__img(src="assets/images/user-avatar.jpg", alt="")
+                .user-blok__name Владимир Астахов
+                .user-blok__description Личный сайт веб разработчика
+                ul.social-blok_welcome
+                    li.social-blok__item_welcome
+                        a.social-blok__link_welcome(href="#")
+                            svg.social-blok__img_welcome
+                                use(xlink:href="assets/images/symbols.svg#vk")
+                    li.social-blok__item_welcome
+                        a.social-blok__link_welcome(href="#")
+                            svg.social-blok__img_welcome
+                                use(xlink:href="assets/images/symbols.svg#github")
+                    li.social-blok__item_welcome
+                        a.social-blok__link_welcome(href="#")
+                            svg.social-blok__img_welcome
+                                use(xlink:href="assets/images/symbols.svg#in")
+                ul.welcome-nav
+                    li.welcome-nav__item
+                        a.welcome-nav__link(href="my-works.html") Мои работы
+                    li.welcome-nav__item
+                        a.welcome-nav__link(href="about.html") Обо мне
+                    li.welcome-nav__item
+                        a.welcome-nav__link(href="blog.html") Блог
+        .welcome__autorization
+            .autorization
+                a.autorization-link(href="#") Авторизоваться
+        .copyright.copyright_welcome.text-blok_copyright © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+        

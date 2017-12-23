@@ -41,6 +41,10 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    fonts: {
+        src: 'src/styles/fonts/*.*',
+        dest: 'build/assets/styles/fonts/'
     }
 }
 
@@ -78,6 +82,7 @@ function scripts() {
 // галповский вотчер
 function watch() {
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.fonts.src, fonts);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.scripts.src, scripts);
@@ -103,6 +108,11 @@ function images() {
         })))
         .pipe(gulp.dest(paths.images.dest));
 }
+//шрифты
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
 
 function lint() {
     return gulp.src('src/scripts/app.js')
@@ -119,10 +129,11 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.lint = lint;
+exports.fonts = fonts;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts, fonts),
     gulp.parallel(watch, server)
 ));
 
