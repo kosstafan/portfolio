@@ -1,0 +1,33 @@
+.fix-form
+            .fix-form__content
+                .fix-form__close
+                .fix-form__title Форма заявки
+                .fix-form__title-error Проверьте правильность заполнения формы
+                .fix-form__message
+                    .fix-form__message-top Внимание!
+                    .fix-form__message-bottom Не забудьте прикрепить  необходимый файл к письму.
+                    button.fix-form__message-link Продолжить
+                form.contacts-form(action="")
+                    .form-area
+                        input.form-input.contacts-form__name(type="name" placeholder="ФИО / название коллектива" required)
+                        textarea.form-input.contacts-form__comment(type="textarea" placeholder="Краткая биография (информация о коллективе)" cols="40" rows="3" required)
+                        select.form-input.contacts-form__tel(type="select" placeholder="Номинация конкурса" required)
+                            option(value="Номинация конкурса") Номинация конкурса
+                            option(value="Поэзия") Поэзия
+                            option(value="Фотография") Фотография
+                            option(value="Хореография") Хореография
+                            option(value="Вокальное искусство") Вокальное искусство
+                            option(value="Музыкальное исполнительное искусство") Музыкальное исполнительное искусство
+                        .file-area    
+                            #btn
+                                label.file-txt(for="files") Прикрепить работу
+                            input.form-input.form-input_file#files(type="file" style="visibility:hidden;" )
+                            input.file-path(type="text" required)
+                        input.form-input.contacts-form__link(type="text" placeholder="Ссылка на файл" required)
+                        textarea.form-input.contacts-form__comment.contacts-form__contacts(type="textarea" placeholder="Контактные данные" cols="40" rows="3" required)
+                        textarea.form-input.contacts-form__comment.contacts-form__prises(type="textarea" placeholder="Награды" cols="40" rows="3" required)
+                        label
+                            .contacts-form__check
+                                input.agree(type="checkbox", name="agree" required)
+                                .check-text Подтверждаю согласие на выезд в Москву 16 сентября 2018 года и проживание в Москве до 23 сентября 2018 года в случае победы в региональном конкурсе
+                        button.form__call Отправить заявку

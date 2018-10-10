@@ -1,32 +1,63 @@
-html{
-    height: 100%;
-    margin: 0;
-    padding: 0;
+$low: 1000px;
+$small: 768px;
+$phones: 680px;
+$little: 560px;
+$i5: 450px;
+
+
+@mixin low{
+    @media screen and(max-width: $low){
+        @content;
+    }
 }
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'robotoregular';
+
+@mixin small{
+    @media screen and(max-width: $small){
+        @content;
+    }
 }
-ul{
-    margin: 0;
-    padding: 0;
+
+@mixin phones{
+    @media screen and(max-width: $phones){
+        @content;
+    }
 }
-li{
-    list-style-type: none;
+
+@mixin little{
+    @media screen and(max-width: $little){
+        @content;
+    }
 }
-a{
-    text-decoration: none;
+
+@mixin i5{
+    @media screen and(max-width: $i5){
+        @content;
+    }
 }
-@import 'fonts/roboto';
-@import 'fonts/Webissimo';
+
+@import 'common/normalize';
+@import 'fonts/stylesheet';
+@import 'common/header';
 @import 'common/main';
-@import 'common/welcome';
-@import 'common/menu';
-@import 'common/technologies';
-@import 'common/slider';
-@import 'common/about';
-@import 'common/blog';
-@import 'common/works';
+@import 'common/hero';
+
+html{
+    font-size: 16px;
+    font-family: 'Roboto';
+    @include low{
+        font-size: 15px;
+    }
+    @include small{
+        font-size: 14px;
+    }
+    @include phones{
+        font-size: 13px;
+    }
+    @include little{
+        font-size: 12px;
+    }
+    @include i5{
+        font-size: 11px;
+    }
+}
 

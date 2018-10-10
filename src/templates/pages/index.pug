@@ -1,38 +1,103 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Анкета соискателя'
 
 block content
-    section.section.hero.welcome
-        .hero__title
-            .user-blok.user-blok_welcome
-                .user-blok__avatar
-                    img.user-blok__img(src="assets/images/user-avatar.jpg", alt="")
-                .user-blok__name Владимир Астахов
-                .user-blok__description Личный сайт веб разработчика
-                ul.social-blok_welcome
-                    li.social-blok__item_welcome
-                        a.social-blok__link_welcome(href="#")
-                            svg.social-blok__img_welcome
-                                use(xlink:href="assets/images/symbols.svg#vk")
-                    li.social-blok__item_welcome
-                        a.social-blok__link_welcome(href="#")
-                            svg.social-blok__img_welcome
-                                use(xlink:href="assets/images/symbols.svg#github")
-                    li.social-blok__item_welcome
-                        a.social-blok__link_welcome(href="#")
-                            svg.social-blok__img_welcome
-                                use(xlink:href="assets/images/symbols.svg#in")
-                ul.welcome-nav
-                    li.welcome-nav__item
-                        a.welcome-nav__link(href="my-works.html") Мои работы
-                    li.welcome-nav__item
-                        a.welcome-nav__link(href="about.html") Обо мне
-                    li.welcome-nav__item
-                        a.welcome-nav__link(href="blog.html") Блог
-        .welcome__autorization
-            .autorization
-                a.autorization-link(href="#") Авторизоваться
-        .copyright.copyright_welcome.text-blok_copyright © Владимир Астахов | Создано с любовью в LoftSchool | 2016
-        
+    .wrapper
+        include ../common/header.pug
+        section.section.hero
+            .title Анкета
+            .info
+                .info-icon
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47"><defs><path id="jorqa" d="M594 345.44v25.74c0 .62-.52 1.13-1.15 1.13l-.38.03v.53c0 .63-.52 1.13-1.17 1.13h-18.86l-.1.01h-.17c-.64 0-1.17-.51-1.17-1.14v-25.72c0-.62.53-1.13 1.17-1.13H572.35l20.5-1.7c.63 0 1.14.5 1.14 1.12zm-3.05 1.71c0-.07-.07-.12-.15-.12h-18.63c-.08 0-.14.05-.14.12v25.72c0 .07.06.12.14.12h18.63c.08 0 .15-.05.15-.12zm2.02-1.7a.12.12 0 0 0-.1-.13l-7.97.7h5.9c.65 0 1.17.5 1.17 1.13v24.18l.79-.03h.09c.06 0 .12-.05.12-.12zm-4.96 22.75v.6c0 .66-.51 1.2-1.14 1.2h-10.73c-.63 0-1.14-.54-1.14-1.2v-.6c0-.66.51-1.2 1.14-1.2h10.73c.63 0 1.14.54 1.14 1.2zm-1 0c0-.12-.08-.2-.14-.2h-10.73c-.06 0-.14.08-.14.2v.6c0 .11.07.2.14.2h10.73c.07 0 .14-.09.14-.2zm-5.51-5.2a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zm0-12a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm1 32a23.53 23.53 0 0 1-23.5-23.5 23.53 23.53 0 0 1 23.5-23.5 23.53 23.53 0 0 1 23.5 23.5 23.53 23.53 0 0 1-23.5 23.5zm0-46c-12.4 0-22.5 10.1-22.5 22.5s10.1 22.5 22.5 22.5 22.5-10.1 22.5-22.5-10.1-22.5-22.5-22.5z"/></defs><g><g transform="translate(-559 -336)"><use fill="#9e9e9e" xlink:href="#jorqa"/></g></g></svg>
+                .seckond-title Личная информация
+                .input-block
+                    input.big-input(type="text", name="")
+                    .input-title ФИО
+                .date-block
+                    .date-text Год рождения
+                    select(class="date" name="month" size="1")
+                        option#date-val(value="01") Год рождения
+                    ul.date-list
+                        li.date-list__line 1990
+                        li.date-list__line 1991
+                        li.date-list__line 1992
+                        li.date-list__line 1993
+                        li.date-list__line 1994
+                        li.date-list__line 1995
+                        li.date-list__line 1996
+                        li.date-list__line 1997
+                        li.date-list__line 1998
+                        li.date-list__line 1999
+                        li.date-list__line 2000
+                .input-block
+                    input.big-input(type="text", name="")
+                    .input-title Место проживания
+                .input-block
+                    input.big-input(type="text", name="")
+                    .input-title Skype
+                .input-block
+                    input.big-input(type="text", name="")
+                    .input-title E-mail
+            .expiriense
+                .expiriense-icon
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47"><defs><path id="yocqa" d="M575.5 977.99h-1a2.5 2.5 0 0 1-2.5-2.5v-1a2.5 2.5 0 0 1 2.5-2.5h1a2.5 2.5 0 0 1 2.5 2.5v1a2.5 2.5 0 0 1-2.5 2.5zm-1-5c-.83 0-1.5.67-1.5 1.5v1c0 .83.67 1.5 1.5 1.5h1c.83 0 1.5-.67 1.5-1.5v-1c0-.83-.67-1.5-1.5-1.5zm22.5 3h-16v-2h16zm-21.5 12h-1a2.5 2.5 0 0 1-2.5-2.5v-1a2.5 2.5 0 0 1 2.5-2.5h1a2.5 2.5 0 0 1 2.5 2.5v1a2.5 2.5 0 0 1-2.5 2.5zm-1-5c-.83 0-1.5.68-1.5 1.5v1c0 .83.67 1.5 1.5 1.5h1c.83 0 1.5-.67 1.5-1.5v-1c0-.82-.67-1.5-1.5-1.5zm22.5 3h-16v-2h16zM575.5 998h-1a2.5 2.5 0 0 1-2.5-2.5v-1a2.5 2.5 0 0 1 2.5-2.5h1a2.5 2.5 0 0 1 2.5 2.5v1a2.5 2.5 0 0 1-2.5 2.5zm-1-5c-.83 0-1.5.67-1.5 1.5v1c0 .83.67 1.5 1.5 1.5h1c.83 0 1.5-.67 1.5-1.5v-1c0-.83-.67-1.5-1.5-1.5zm22.5 3h-16v-2h16zm-12.5 12a23.53 23.53 0 0 1-23.5-23.5 23.53 23.53 0 0 1 23.5-23.5 23.53 23.53 0 0 1 23.5 23.5 23.53 23.53 0 0 1-23.5 23.5zm0-46c-12.4 0-22.5 10.1-22.5 22.5s10.1 22.5 22.5 22.5 22.5-10.1 22.5-22.5-10.1-22.5-22.5-22.5z"/></defs><g><g transform="translate(-561 -961)"><use fill="#9e9e9e" xlink:href="#yocqa"/></g></g></svg>
+                .seckond-title Расскажите о своем опыте
+                .expiriense-checks
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name БЭМ/OOCSS
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Stylus/LESS/SASS
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Работаю с SVG
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Верстаю семантично
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name ES2015/ES2016
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Gulp/GRUNT
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Webpack
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name jQuery
+                    label.check-label
+                        .check-area
+                            input.check(type="checkbox", name="")
+                            .check-name Иcпользую Git
+            .js
+                .js-icon
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47"><defs><path id="ccf7a" d="M578.36 1354H581v11.06c0 .78-.12 1.48-.37 2.09a4.33 4.33 0 0 1-2.62 2.5 6.87 6.87 0 0 1-4.01.05 3.98 3.98 0 0 1-2.62-2.34 5.36 5.36 0 0 1-.37-2.08h2.65c0 .45.05.84.17 1.16.12.32.28.58.48.78.21.2.46.34.74.44.3.09.61.14.96.14.34 0 .66-.06.95-.18.28-.12.53-.3.74-.53.2-.23.37-.51.48-.85.12-.34.18-.73.18-1.18zm14.85 11.77c0-.32-.05-.6-.14-.84-.1-.25-.27-.47-.53-.68-.25-.2-.6-.4-1.04-.6-.45-.18-1.02-.38-1.72-.59-.76-.22-1.47-.47-2.12-.75a7.33 7.33 0 0 1-1.67-1 4.27 4.27 0 0 1-1.1-1.3 3.5 3.5 0 0 1-.4-1.69c0-.62.15-1.2.42-1.73.28-.52.67-.98 1.17-1.36.5-.39 1.1-.69 1.8-.9a7.9 7.9 0 0 1 2.3-.32c.91 0 1.73.12 2.45.38.72.25 1.33.6 1.82 1.03a4.5 4.5 0 0 1 1.54 3.34h-2.78c0-.38-.06-.72-.18-1.04-.12-.32-.3-.6-.56-.82a2.59 2.59 0 0 0-.95-.54c-.38-.13-.83-.2-1.35-.2-.5 0-.92.06-1.28.17-.36.1-.66.25-.9.44-.24.2-.42.42-.53.69-.11.26-.17.55-.17.85 0 .58.28 1.06.84 1.44a9.1 9.1 0 0 0 2.58 1.07c.9.26 1.69.54 2.35.86a6.8 6.8 0 0 1 1.65 1.06 3.85 3.85 0 0 1 1.3 3 3.78 3.78 0 0 1-1.55 3.1c-.5.37-1.1.66-1.81.85a8.81 8.81 0 0 1-4.64-.01c-.75-.2-1.43-.5-2.02-.92-.6-.4-1.08-.92-1.44-1.53a4.15 4.15 0 0 1-.55-2.16h2.8c0 .5.08.91.26 1.27.18.35.43.64.74.86.31.23.68.39 1.11.5.43.1.89.15 1.38.15.97 0 1.7-.2 2.19-.57.49-.38.73-.89.73-1.51zM584.5 1386a23.53 23.53 0 0 1-23.5-23.5 23.53 23.53 0 0 1 23.5-23.5 23.53 23.53 0 0 1 23.5 23.5 23.53 23.53 0 0 1-23.5 23.5zm0-46c-12.4 0-22.5 10.1-22.5 22.5s10.1 22.5 22.5 22.5 22.5-10.1 22.5-22.5-10.1-22.5-22.5-22.5z"/></defs><g><g transform="translate(-561 -1339)"><use fill="#9e9e9e" xlink:href="#ccf7a"/></g></g></svg>
+                .seckond-title Уровень владения JavaScript
+                #slider-wrapper
+                    #slider
+                    #marks
+                        span Не владею
+                        span Использую готовые<br>решения
+                        span Использую готовые решения<br>и умею их переделывать
+                        span Пишу сложный JS с нуля
+                        span 
+            .about
+                .about-icon
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47"><defs><path id="mz3ca" d="M599.02 1667.99H583v-2h16zm0 6H583v-2h16zm0 6H583v-2h16zm0 6h-29v-2h29zm0 6.01h-29v-2h29zM579 1666.99h-7a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1zm0-1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2zm5.5 37.01a23.53 23.53 0 0 1-23.5-23.5 23.53 23.53 0 0 1 23.5-23.5 23.53 23.53 0 0 1 23.5 23.5 23.53 23.53 0 0 1-23.5 23.5zm0-46c-12.4 0-22.5 10.1-22.5 22.5s10.1 22.5 22.5 22.5 22.5-10.1 22.5-22.5-10.1-22.5-22.5-22.5z"/></defs><g><g transform="translate(-561 -1656)"><use fill="#9e9e9e" xlink:href="#mz3ca"/></g></g></svg>
+                .seckond-title.about-title Расскажите о себе
+                .about-description Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+                textarea.comment(name="", cols="30", rows="10" placeholder="Понравилась тем, что...")
+                a.ready(href="#") Готово
+
