@@ -19,6 +19,8 @@ $(".big-input").on("focusout", function (e) {
     if (!$(this).val()) {
         $(this).siblings(".input-title").removeClass("input-title_focus");
         $(this).removeClass("big-input_focus");
+    } else{
+        $(this).removeClass("big-input_focus");
     }
 });
 
