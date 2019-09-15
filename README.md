@@ -7,5 +7,6 @@
 
 #### Как установить проект
 1. clone this repo
-2. npm i
-3. gulp
+2. npm install gulp
+3. npm i gulp-sass -ES --unsafe-perm=true
+4. gulp

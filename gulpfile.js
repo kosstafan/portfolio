@@ -100,12 +100,12 @@ function server() {
 // переносим и минифицируем картинки
 function images() {
     return gulp.src(paths.images.src)
-        .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+        /* .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
             interlaced: true,
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
-        })))
+        }))) */
         .pipe(gulp.dest(paths.images.dest));
 }
 //шрифты
